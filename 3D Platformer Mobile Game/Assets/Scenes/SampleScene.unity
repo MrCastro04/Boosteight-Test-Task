@@ -321,10 +321,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mobile UI
       objectReference: {fileID: 0}
-    - target: {fileID: 4651118192527600894, guid: 50e61cbacbfeba34ab5825a2dfd27e28, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7768689875275091597, guid: 50e61cbacbfeba34ab5825a2dfd27e28, type: 3}
       propertyPath: m_Pivot.x
       value: 0
