@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+         
     public static PlayerController instance;
 
     public enum PlayerControlMode { FirstPerson, ThirdPerson}
@@ -25,11 +25,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float cameraSensitivity;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float moveInputDeadZone;
+     public float PlayerAcceleration;
 
     [Header("Third person camera settings")]
     [SerializeField] private LayerMask cameraObstacleLayers;
     private float maxCameraDistance;
-    private bool isMoving;
+    public bool IsMoving;
 
     // Touch detection
     private int leftFingerId, rightFingerId;
@@ -130,7 +131,7 @@ public class PlayerController : MonoBehaviour
                         // Stop tracking the left finger
                         leftFingerId = -1;
                         //Debug.Log("Stopped tracking left finger");
-                        isMoving = false;
+                        IsMoving = false;
                     }
                     else if (t.fingerId == rightFingerId)
                     {
@@ -182,7 +183,7 @@ public class PlayerController : MonoBehaviour
                 break;
         }
 
-        if (mode == PlayerControlMode.ThirdPerson && !isMoving)
+        if (mode == PlayerControlMode.ThirdPerson && !IsMoving)
         {
             // Rotate the graphics in the opposite direction when stationary
             graphics.Rotate(graphics.up, -lookInput.x);
@@ -211,15 +212,16 @@ public class PlayerController : MonoBehaviour
         // Don't move if the touch delta is shorter than the designated dead zone
         if (moveInput.sqrMagnitude <= moveInputDeadZone)
         {
-            isMoving = false;
+            IsMoving = false;
             return;
         }
 
-        if (!isMoving) {
+        if (!IsMoving) {
             graphics.localRotation = Quaternion.Euler(0, 0, 0);
-            isMoving = true;
+            IsMoving = true;
         }
-        // Multiply the normalized direction by the speed
+
+        IsMoving = true;// Multiply the normalized direction by the speed
         Vector2 movementDirection = moveInput.normalized * moveSpeed * Time.deltaTime;
         // Move relatively to the local transform's direction
         characterController.Move(transform.right * movementDirection.x + transform.forward * movementDirection.y);
