@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-         
     public static PlayerController instance;
 
     public enum PlayerControlMode { FirstPerson, ThirdPerson}
@@ -11,7 +10,8 @@ public class PlayerController : MonoBehaviour
 
     // References
     [Space(20)]
-    [SerializeField] private CharacterController characterController;
+    [SerializeField] private JumpButton _jumpButton;
+    [SerializeField] private Rigidbody _rigidbody;
     [Header("First person camera")]
     [SerializeField] private Transform fpCameraTransform;
     [Header("Third person camera")]
@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float cameraSensitivity;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float moveInputDeadZone;
+    [SerializeField] private float _jumpForce;
      public float PlayerAcceleration;
 
     [Header("Third person camera settings")]
@@ -44,10 +45,28 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveTouchStartPosition;
     private Vector2 moveInput;
 
+    
     private void Awake(){
         if(instance == null) instance = this;
         else if(instance != this) Destroy(gameObject);
     }
+
+    private void OnEnable()
+    {
+        _jumpButton.OnJump += () =>
+        {
+            _rigidbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+        };
+    }
+
+    private void OnDisable()
+    {
+        _jumpButton.OnJump -= () =>
+        {
+            _rigidbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+        }; 
+    }
+
 
     private void Start()
     {
@@ -77,22 +96,20 @@ public class PlayerController : MonoBehaviour
         GetTouchInput();
 
 
-        if (rightFingerId != -1) {
-            // Ony look around if the right finger is being tracked
-            //Debug.Log("Rotating");
+        if (rightFingerId != -1) 
+        {
             LookAround();
         }
 
         if (leftFingerId != -1)
         {
-            // Ony move if the left finger is being tracked
-            //Debug.Log("Moving");
             Move();
         }
     }
 
     private void FixedUpdate()
     {
+        
         if (mode == PlayerControlMode.ThirdPerson) MoveCamera();
     }
 
@@ -207,9 +224,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Move() {
-
-        // Don't move if the touch delta is shorter than the designated dead zone
+    private void Move()
+    {
+        // Не двигаемся, если ввод находится в "мертвой зоне"
         if (moveInput.sqrMagnitude <= moveInputDeadZone)
         {
             IsMoving = false;
@@ -217,20 +234,13 @@ public class PlayerController : MonoBehaviour
         }
 
         if (!IsMoving) {
+            // Устанавливаем rotation графики только один раз при начале движения
             graphics.localRotation = Quaternion.Euler(0, 0, 0);
             IsMoving = true;
         }
-
-        IsMoving = true;// Multiply the normalized direction by the speed
-        Vector2 movementDirection = moveInput.normalized * moveSpeed * Time.deltaTime;
-        // Move relatively to the local transform's direction
-        characterController.Move(transform.right * movementDirection.x + transform.forward * movementDirection.y);
+        
+        Vector3 moveDirection = transform.right * moveInput.normalized.x + transform.forward * moveInput.normalized.y;
+        
+        transform.position += moveDirection * moveSpeed * Time.deltaTime;
     }
-    
-    public void ResetInput(){
-        // id = -1 means the finger is not being tracked
-        leftFingerId = -1;
-        rightFingerId = -1;
-    }
-
 }
