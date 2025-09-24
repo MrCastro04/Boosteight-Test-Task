@@ -1,55 +1,32 @@
 ﻿using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class MovementController : MonoBehaviour
+public class SimpleMovementController : MonoBehaviour
 {
-    [SerializeField] private PlayerInput _playerInput;
+    [Header("Movement")]
+    public float speed = 5f;
     
-    private float playerSpeed = 5.0f;
-    private float jumpHeight = 1.5f;
-    private float gravityValue = -9.81f;
-
-    private CharacterController controller;
-    private Vector3 playerVelocity;
-    private bool groundedPlayer;
-    private string _moveAction = "Move";
-    private string _jumpAction = "Jump";
+    [Header("Rotation")]
+    public float rotationSpeed = 100f; // Градусы в секунду
     
-    private void Awake()
-    {
-        controller = GetComponent<CharacterController>();
-    }
+    [Header("Input")]
+    public VariableJoystick variableJoystick;
+    
+    [Header("Components")]
+    public CharacterController characterController;
 
-    void Update()
+    public void Update()
     {
-        groundedPlayer = controller.isGrounded;
+        // Поворот вокруг оси Y (горизонтальная ось джойстика)
+        float rotationInput = variableJoystick.Horizontal;
+        if (Mathf.Abs(rotationInput) > 0.1f)
+        {
+            transform.Rotate(0f, rotationInput * rotationSpeed * Time.deltaTime, 0f);
+        }
         
-        if (groundedPlayer && playerVelocity.y < 0)
-        {
-            playerVelocity.y = 0f;
-        }
-
-        // Read input
-        Vector2 input = _playerInput.actions[_moveAction].ReadValue<Vector2>();
-        Vector3 move = new Vector3(input.x, 0, input.y);
-        move = Vector3.ClampMagnitude(move, 1f);
-
-        if (move != Vector3.zero)
-        {
-            transform.forward = move;
-        }
-
-        // Jump
-        if (_playerInput.actions[_jumpAction].triggered && groundedPlayer)
-        {
-            playerVelocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravityValue);
-        }
-
-        // Apply gravity
-        playerVelocity.y += gravityValue * Time.deltaTime;
-
-        // Combine horizontal and vertical movement
-        Vector3 finalMove = (move * playerSpeed) + (playerVelocity.y * Vector3.up);
-        controller.Move(finalMove * Time.deltaTime);
+        // Движение вперед/назад (вертикальная ось джойстика)
+        float moveInput = variableJoystick.Vertical;
+        Vector3 moveDirection = transform.forward * moveInput;
+        
+        characterController.Move(moveDirection * speed * Time.deltaTime);
     }
 }

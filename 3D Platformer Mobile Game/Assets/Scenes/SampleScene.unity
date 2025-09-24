@@ -570,7 +570,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6e28e285fe4dff9d342fb7f83031ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerInput: {fileID: 1339665747}
+  speed: 20
+  variableJoystick: {fileID: 1158315363}
+  characterController: {fileID: 884806550}
 --- !u!143 &884806550
 CharacterController:
   m_ObjectHideFlags: 0
@@ -829,14 +831,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6546538550735041225, guid: 50e61cbacbfeba34ab5825a2dfd27e28, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4864082399703338637, guid: 50e61cbacbfeba34ab5825a2dfd27e28, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1158315363}
     - targetCorrespondingSourceObject: {fileID: 7196072108146372935, guid: 50e61cbacbfeba34ab5825a2dfd27e28, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1721051069}
   m_SourcePrefab: {fileID: 100100000, guid: 50e61cbacbfeba34ab5825a2dfd27e28, type: 3}
+--- !u!1 &1158315362 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4864082399703338637, guid: 50e61cbacbfeba34ab5825a2dfd27e28, type: 3}
+  m_PrefabInstance: {fileID: 1158315361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1158315363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158315362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42844a4fccbd54746b90cade4ff70f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handleRange: 1
+  deadZone: 0
+  axisOptions: 0
+  snapX: 0
+  snapY: 0
+  background: {fileID: 1158315364}
+  handle: {fileID: 1158315365}
+  moveThreshold: 1
+  joystickType: 0
+--- !u!224 &1158315364 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3026317259679272589, guid: 50e61cbacbfeba34ab5825a2dfd27e28, type: 3}
+  m_PrefabInstance: {fileID: 1158315361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1158315365 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2702519355632848525, guid: 50e61cbacbfeba34ab5825a2dfd27e28, type: 3}
+  m_PrefabInstance: {fileID: 1158315361}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1339665745
 GameObject:
   m_ObjectHideFlags: 0
