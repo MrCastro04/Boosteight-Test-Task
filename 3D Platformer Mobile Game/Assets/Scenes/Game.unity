@@ -281,53 +281,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7263038764754687748, guid: f0c1b7697cbd2ee44a5b3a15082a85fa, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 723449bdd9d2aef4c8d524194e5bfb49, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7263038743984494475, guid: f0c1b7697cbd2ee44a5b3a15082a85fa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 201955507}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c1b7697cbd2ee44a5b3a15082a85fa, type: 3}
---- !u!1 &201955502 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7263038743984494475, guid: f0c1b7697cbd2ee44a5b3a15082a85fa, type: 3}
-  m_PrefabInstance: {fileID: 201955501}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &201955505 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7263038764754687748, guid: f0c1b7697cbd2ee44a5b3a15082a85fa, type: 3}
-  m_PrefabInstance: {fileID: 201955501}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &201955506 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 964685252929719208, guid: f0c1b7697cbd2ee44a5b3a15082a85fa, type: 3}
-  m_PrefabInstance: {fileID: 201955501}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201955502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b1fb2a654c14657b51d05bd076c111e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &201955507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201955502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9001d327eed746cdacde2683310a0689, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 201955505}
-  _playerController: {fileID: 201955506}
 --- !u!1 &244686339
 GameObject:
   m_ObjectHideFlags: 0
