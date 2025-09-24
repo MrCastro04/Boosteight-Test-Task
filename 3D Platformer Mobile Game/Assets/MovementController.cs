@@ -6,7 +6,7 @@ public class SimpleMovementController : MonoBehaviour
     public float speed = 5f;
     
     [Header("Rotation")]
-    public float rotationSpeed = 100f; // Градусы в секунду
+    public float rotationSpeed = 100f; 
     
     [Header("Input")]
     public VariableJoystick variableJoystick;
