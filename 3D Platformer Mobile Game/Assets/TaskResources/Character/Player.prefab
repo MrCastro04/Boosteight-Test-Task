@@ -1,5 +1,129 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2605490615159741824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7007848576832636141}
+  m_Layer: 3
+  m_Name: TP Camera Pole
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7007848576832636141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2605490615159741824}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.29036817, y: -0, z: -0, w: 0.956915}
+  m_LocalPosition: {x: 0, y: 1.99, z: 1.25}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2003842119357926706}
+  m_Father: {fileID: 7263038744001275923}
+  m_LocalEulerAnglesHint: {x: 33.76, y: 0, z: 0}
+--- !u!1 &2729608469985399953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2003842119357926706}
+  - component: {fileID: 5125173956984014566}
+  - component: {fileID: 6714747938242799398}
+  m_Layer: 3
+  m_Name: TP Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2003842119357926706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2729608469985399953}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.13463254, y: -0, z: -0, w: 0.99089557}
+  m_LocalPosition: {x: 0, y: 1.46, z: -4.32}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7007848576832636141}
+  m_LocalEulerAnglesHint: {x: 15.475, y: 0, z: 0}
+--- !u!20 &5125173956984014566
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2729608469985399953}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60.000004
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!81 &6714747938242799398
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2729608469985399953}
+  m_Enabled: 1
 --- !u!1 &7263038743984494475
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,9 +134,13 @@ GameObject:
   m_Component:
   - component: {fileID: 7263038744001275923}
   - component: {fileID: 7263038764754687748}
-  m_Layer: 7
+  - component: {fileID: 120901287136688171}
+  - component: {fileID: 2030995264264166449}
+  - component: {fileID: 964685252929719208}
+  - component: {fileID: 4694495312841692405}
+  m_Layer: 3
   m_Name: Player
-  m_TagString: 
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,11 +160,12 @@ Transform:
   m_Children:
   - {fileID: 7263038744001275967}
   - {fileID: 7263038744001275980}
+  - {fileID: 7007848576832636141}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &7263038764754687748
 Animator:
-  serializedVersion: 7
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -44,18 +173,109 @@ Animator:
   m_GameObject: {fileID: 7263038743984494475}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 0a419bf6566f4e1f9436cf249cd5c06c, type: 2}
-  m_Controller: {fileID: 9100000, guid: 3821ac9f6f484a7db90c632195e8780c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 723449bdd9d2aef4c8d524194e5bfb49, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 1
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_AnimatePhysics: 1
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!136 &120901287136688171
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7263038743984494475}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!54 &2030995264264166449
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7263038743984494475}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 2
+--- !u!114 &964685252929719208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7263038743984494475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1fb2a654c14657b51d05bd076c111e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 1
+  _jumpButton: {fileID: 0}
+  _rigidbody: {fileID: 2030995264264166449}
+  fpCameraTransform: {fileID: 0}
+  cameraPole: {fileID: 7007848576832636141}
+  tpCameraTransform: {fileID: 2003842119357926706}
+  graphics: {fileID: 7263038744001275967}
+  cameraSensitivity: 10
+  moveSpeed: 8
+  moveInputDeadZone: 15
+  _jumpForce: 5
+  PlayerAcceleration: 10
+  cameraObstacleLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  IsMoving: 0
+--- !u!114 &4694495312841692405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7263038743984494475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9001d327eed746cdacde2683310a0689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 7263038764754687748}
+  _playerController: {fileID: 964685252929719208}
 --- !u!1 &7263038743984494482
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,7 +285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275980}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Armature
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -98,7 +318,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7263038744001275967}
   - component: {fileID: 7263038763446065029}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Body
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -116,7 +336,7 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7263038744001275923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -137,8 +357,6 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 3
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 2
   m_RendererPriority: 0
   m_Materials:
@@ -236,7 +454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275925}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: ItemBack
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -267,7 +485,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275961}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: HEAD
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -299,7 +517,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275950}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: KNEE.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -331,7 +549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275990}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: SPINE_03
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -363,7 +581,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275930}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_05.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -395,7 +613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275943}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: ANKLE.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -427,7 +645,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275958}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_03.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -459,7 +677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275972}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: SHOULDER.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -491,7 +709,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275975}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_02.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -523,7 +741,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275989}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_01.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -555,7 +773,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275960}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: HIPS
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -589,7 +807,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275941}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_05.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -621,7 +839,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275968}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_11.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -653,7 +871,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275931}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: LEGS.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -685,7 +903,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275970}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: SPINE_04
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -720,7 +938,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275963}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: WRIST.001.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -752,7 +970,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275942}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: SPINE_02
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -784,7 +1002,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275948}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: SHOULDER.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -816,7 +1034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275981}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: FINGERS.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -848,7 +1066,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275966}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: ANKLE.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -880,7 +1098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275954}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: ARM.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -912,7 +1130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275938}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: WRIST.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -947,7 +1165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275939}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_06.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -979,7 +1197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275956}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: SPINE_01
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1011,7 +1229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275987}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: ARM.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1043,7 +1261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275976}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: ROOT
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1075,7 +1293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275977}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_08.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1107,7 +1325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275986}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: KNEE.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1139,7 +1357,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275964}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: NECK
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1171,7 +1389,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275984}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_07.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1203,7 +1421,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275940}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: ELBOW.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1235,7 +1453,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275936}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: LEGS.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1267,7 +1485,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275952}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: ELBOW.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1299,7 +1517,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275949}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: FINGERS.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1331,7 +1549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275953}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_09.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1363,7 +1581,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275988}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_11.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1395,7 +1613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275982}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_01.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1427,7 +1645,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275951}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_06.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1459,7 +1677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275955}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_03.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1491,7 +1709,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275962}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_10.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1523,7 +1741,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275978}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_08.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1555,7 +1773,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275973}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_04.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1587,7 +1805,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275969}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_10.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1619,7 +1837,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275959}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_02.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1651,7 +1869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275996}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_09.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1683,7 +1901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275937}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_07.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1715,7 +1933,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275946}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: WRIST.001.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1747,7 +1965,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001276006}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_03.R_end
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1778,7 +1996,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275994}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_06.R_end
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1809,7 +2027,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275985}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: WRIST.L
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1844,7 +2062,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275971}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_04.R
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1876,7 +2094,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275995}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: FINGERS.R_end
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1907,7 +2125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001276005}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_11.L_end
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1938,7 +2156,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001275993}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_06.L_end
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -1969,7 +2187,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001276003}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: HEAD_end
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -2000,7 +2218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001276001}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: FINGERS.L_end
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -2031,7 +2249,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001276004}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_03.L_end
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -2062,7 +2280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001276002}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_09.R_end
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -2093,7 +2311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001276007}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_09.L_end
   m_TagString: 
   m_Icon: {fileID: 0}
@@ -2124,7 +2342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263038744001276000}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: PHALANX_11.R_end
   m_TagString: 
   m_Icon: {fileID: 0}
