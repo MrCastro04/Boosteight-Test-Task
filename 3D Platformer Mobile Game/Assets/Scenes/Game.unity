@@ -266,6 +266,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 120901287136688171, guid: f0c1b7697cbd2ee44a5b3a15082a85fa, type: 3}
+      propertyPath: m_Center.y
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 964685252929719208, guid: f0c1b7697cbd2ee44a5b3a15082a85fa, type: 3}
       propertyPath: _jumpForce
       value: 5
@@ -349,9 +353,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7263038743984494475, guid: f0c1b7697cbd2ee44a5b3a15082a85fa, type: 3}
       insertIndex: 2
-      addedObject: {fileID: 201955508}
-    - targetCorrespondingSourceObject: {fileID: 7263038743984494475, guid: f0c1b7697cbd2ee44a5b3a15082a85fa, type: 3}
-      insertIndex: 3
       addedObject: {fileID: 201955509}
   m_SourcePrefab: {fileID: 100100000, guid: f0c1b7697cbd2ee44a5b3a15082a85fa, type: 3}
 --- !u!1 &201955502 stripped
@@ -359,29 +360,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7263038743984494475, guid: f0c1b7697cbd2ee44a5b3a15082a85fa, type: 3}
   m_PrefabInstance: {fileID: 201955501}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &201955508
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201955502}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!54 &201955509
 Rigidbody:
   m_ObjectHideFlags: 0
