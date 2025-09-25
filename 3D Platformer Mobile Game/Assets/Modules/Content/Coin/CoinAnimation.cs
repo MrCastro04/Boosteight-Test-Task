@@ -26,8 +26,6 @@ public class CoinAnimation : MonoBehaviour
         if(coinCollideDetector != _coinCollideDetector) return;
         
         StartCoroutine(DestroyAnimation(_destroyDuration));
-        
-        gameObject.SetActive(false);
     }
 
     private void Start()
@@ -48,5 +46,7 @@ public class CoinAnimation : MonoBehaviour
         yield return tween.WaitForCompletion();
 
         transform.DOKill(true);
+        
+        gameObject.SetActive(false);
     }
 }
