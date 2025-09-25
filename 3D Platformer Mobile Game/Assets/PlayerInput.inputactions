@@ -1,54 +1,5 @@
 {
     "name": "PlayerInput",
-    "maps": [
-        {
-            "name": "Player",
-            "id": "d03a7897-4c7a-418f-8dd8-c38bf1e15f22",
-            "actions": [
-                {
-                    "name": "Move",
-                    "type": "Value",
-                    "id": "db5dc1e9-d1db-4e8e-af7e-87ca2afdf19c",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Jump",
-                    "type": "Button",
-                    "id": "7bb0d87f-5bbd-4e7a-8c88-3dd1c117008a",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "c8324aa2-98ff-4dcb-809c-56f74c17f3ac",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "28915f3b-69ea-46b9-b631-4e34d0fff928",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        }
-    ],
+    "maps": [],
     "controlSchemes": []
 }

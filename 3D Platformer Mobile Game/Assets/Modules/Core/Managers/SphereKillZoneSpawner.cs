@@ -1,13 +1,14 @@
 ﻿using Modules.Content.Kill_Zone;
+using Modules.Content.Player;
 using UnityEngine;
 
 namespace Modules.Core.Managers
 {
-    public class ManagerKillZoneWithTrap : MonoBehaviour
+    public class SphereKillZoneSpawner : MonoBehaviour
     {
         [SerializeField] private KillZone _killZone;
         [SerializeField] private Transform _killZoneSpawnTransform;
-        
+
         private void OnEnable()
         {
             TrapEvents.OnActivateTrap += SpawnKillZone;

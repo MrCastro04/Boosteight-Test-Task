@@ -1,4 +1,5 @@
 ﻿using System;
+using Modules.Content.Player;
 using UnityEngine;
 
 namespace Modules.Content.Kill_Zone
@@ -9,7 +10,17 @@ namespace Modules.Content.Kill_Zone
         [SerializeField] private int _activateCount = 1;
 
         private int _currentActivatesCount = 0;
-        
+
+        private void OnEnable()
+        {
+            PlayerEvents.OnLose += () => _currentActivatesCount = 0;
+        }
+
+        private void OnDisable()
+        {
+            PlayerEvents.OnLose += () => _currentActivatesCount = 0;
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             if(_currentActivatesCount >= _activateCount) return;
