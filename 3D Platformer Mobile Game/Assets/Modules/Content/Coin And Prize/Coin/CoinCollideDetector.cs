@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Modules.Content.Coin_And_Prize.Coin;
+using UnityEngine;
 
 namespace Modules.Content.Coin
 {

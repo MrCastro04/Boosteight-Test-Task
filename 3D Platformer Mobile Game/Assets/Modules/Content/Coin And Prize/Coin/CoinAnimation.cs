@@ -1,40 +1,31 @@
-using System;
-using System.Collections;
 using DG.Tweening;
 using Modules.Content.Coin;
+using Modules.Content.Coin_And_Prize.Coin;
 using UnityEngine;
 
 [RequireComponent(typeof(CoinCollideDetector))]
 public class CoinAnimation : BaseAnimation
 {
-    [SerializeField] private float _destroyDuration = 0.4f;
     [SerializeField] private CoinCollideDetector _coinCollideDetector;
     
     private void OnEnable()
     {
-        CoinEvents.OnCollect += PlayDestroyAnimationThenDestory;
+        CoinEvents.OnCollect += PlayDestroyAnimationThenDisable;
     }
 
     private void OnDisable()
     {
-        CoinEvents.OnCollect -= PlayDestroyAnimationThenDestory;
+        CoinEvents.OnCollect -= PlayDestroyAnimationThenDisable;
     }
 
-    private void PlayDestroyAnimationThenDestory(CoinCollideDetector coinCollideDetector)
+    private async void PlayDestroyAnimationThenDisable(CoinCollideDetector coinCollideDetector)
     {
         if(coinCollideDetector != _coinCollideDetector) return;
         
-        StartCoroutine(DestroyAnimation(_destroyDuration));
-    }
-    
-    private IEnumerator DestroyAnimation(float duration)
-    {
-        Tween tween = transform.DOScale(Vector3.zero, duration);
-
-        yield return tween.WaitForCompletion();
-
-        transform.DOKill(true);
+       await transform.DOScale(Vector3.zero, _scaleDuration).AsyncWaitForCompletion();
+       
+       transform.DOKill(true);
         
-        gameObject.SetActive(false);
+       gameObject.SetActive(false);
     }
 }

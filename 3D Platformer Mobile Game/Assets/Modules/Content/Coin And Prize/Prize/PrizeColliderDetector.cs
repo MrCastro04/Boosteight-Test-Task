@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Modules.Content.Coin_And_Prize.Prize;
+using UnityEngine;
 
 namespace Modules.Content.Coin
 {
@@ -8,7 +9,7 @@ namespace Modules.Content.Coin
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                
+                PrizeEvents.ExecuteEventGetPrize();
             }   
         }
     }
