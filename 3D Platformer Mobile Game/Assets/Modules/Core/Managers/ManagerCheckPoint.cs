@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Modules.Content.Coin;
+using Modules.Content.Coin_And_Prize.Coin;
 using Modules.Content.Player;
 using Modules.Core.CheckPoint;
 using UnityEngine;

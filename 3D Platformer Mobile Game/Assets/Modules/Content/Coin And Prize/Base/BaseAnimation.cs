@@ -10,6 +10,7 @@ namespace Modules.Content.Coin
         [SerializeField] protected float _rotationDuration = 1f;
         [SerializeField] protected float _upDownDuration;
 
+        
         protected virtual void Start()
         {
             transform.DORotate(new Vector3(0f, 360f, 0f), _rotationDuration, RotateMode.FastBeyond360)

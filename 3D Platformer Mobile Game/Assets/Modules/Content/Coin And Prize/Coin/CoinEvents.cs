@@ -1,7 +1,8 @@
 ﻿using System;
+using Modules.Content.Coin;
 using UnityEngine;
 
-namespace Modules.Content.Coin
+namespace Modules.Content.Coin_And_Prize.Coin
 {
     public static class CoinEvents
     {
