@@ -1,4 +1,5 @@
 ﻿using System;
+using Modules.Content.Player;
 using UnityEngine;
 
 public class PlayerAnimationsUpdater : MonoBehaviour
