@@ -6,9 +6,6 @@ namespace Modules.Content.Platforms
 {
     public class RotateablePlatform : MonoBehaviour
     {
-        [SerializeField] private bool _rotateOnlyX = false;
-        [SerializeField] private bool _rotateOnlyY = false;
-        [SerializeField] private bool _rotateOnlyZ = false;
         [SerializeField] private float _rotationDuration;
         [SerializeField] private Vector3 _rotateVector;
         

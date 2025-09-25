@@ -9,14 +9,13 @@ namespace Modules.Content.Kill_Zone
     [RequireComponent(typeof(Collider))]
     public class KillZone : MonoBehaviour
     {
-        public bool CanKillAtStart = false;
+        [NonSerialized] public bool CanKill = true;
         [SerializeField] private bool _killWithTrigger = true;
         [SerializeField] private bool _destroySelfWithTimer = false;
         [SerializeField] private float _destroySelfDuration;
 
         private Collider _collider;
-
-
+        
         private void Awake()
         {
             _collider = GetComponent<Collider>();
@@ -41,8 +40,17 @@ namespace Modules.Content.Kill_Zone
 
         private void OnCollisionEnter(Collision other)
         {
-            Debug.Log($"{_killWithTrigger}");
-            if (_killWithTrigger | CanKillAtStart == false) return;
+            if (_killWithTrigger | CanKill == false) return;
+
+            if (other.gameObject.CompareTag("Player"))
+            {
+                PlayerEvents.ExecuteEventPlayerLose();
+            }
+        }
+
+        private void OnCollisionStay(Collision other)
+        {
+            if (_killWithTrigger | CanKill == false) return;
 
             if (other.gameObject.CompareTag("Player"))
             {
@@ -52,7 +60,7 @@ namespace Modules.Content.Kill_Zone
 
         private void OnTriggerEnter(Collider other)
         {
-            if (_killWithTrigger == false | CanKillAtStart == false) return;
+            if (_killWithTrigger == false | CanKill == false) return;
 
             if (other.CompareTag("Player"))
             {
