@@ -2,9 +2,9 @@
 
 namespace Modules.Content.Coin
 {
-    public class CoinCollideDetector : MonoBehaviour
+    public class CoinCollideDetector : MonoBehaviour , IColliderDetector
     {
-        private void OnTriggerEnter(Collider other)
+        public void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
             {

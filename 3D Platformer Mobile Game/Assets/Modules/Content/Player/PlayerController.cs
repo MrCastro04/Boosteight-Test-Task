@@ -216,7 +216,7 @@ namespace Modules.Content.Player
         private void CheckIfGrounded()
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.1f, groundLayer))
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.3f, groundLayer))
             {
                 isGrounded = true;
             }
