@@ -4910,9 +4910,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 427da335a7f769a43acd51a4ddf385bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _scaleDuration: 1
   _rotationDuration: 0.5
   _upDownDuration: 1
-  _destroyDuration: 1
   _coinCollideDetector: {fileID: 7812581168934975580}
 --- !u!114 &7812581168934975580
 MonoBehaviour:
