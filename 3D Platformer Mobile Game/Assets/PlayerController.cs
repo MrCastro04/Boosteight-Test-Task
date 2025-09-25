@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     // Jump Logic
     [Header("Jump Settings")]
     [SerializeField] private LayerMask groundLayer;
-    private bool isGrounded;
+    private bool isGrounded = true;
 
     // Touch detection
     private int leftFingerId, rightFingerId;
