@@ -8,13 +8,13 @@ namespace Modules.Content.Coin
         {
             if (other.CompareTag("Player"))
             {
-                CoinEvents.ExecuteEventCollect(this);
+                CoinEvents.ExecuteEventCoinCollect(this);
             }
         }
 
         private void OnDisable()
         {
-           CoinEvents.ExecuteEventDestroyCoin(transform.position);
+           CoinEvents.ExecuteEventCoinDestroy(transform.position);
         }
     }
 }
