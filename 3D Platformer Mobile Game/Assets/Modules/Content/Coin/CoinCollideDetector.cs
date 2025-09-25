@@ -12,9 +12,9 @@ namespace Modules.Content.Coin
             }
         }
 
-        private void OnDestroy()
+        private void OnDisable()
         {
-           CoinEvents.ExecuteEventDestroyCoin(transform.position, this);
+           CoinEvents.ExecuteEventDestroyCoin(transform.position);
         }
     }
 }

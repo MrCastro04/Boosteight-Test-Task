@@ -63,11 +63,6 @@ namespace Modules.Content.Player
             {
                 TryJump();
             };
-
-            PlayerEvents.OnLose += () =>
-            {
-              Destroy(gameObject);
-            };
         }
 
         private void OnDisable()
@@ -75,11 +70,6 @@ namespace Modules.Content.Player
             PlayerEvents.OnJump -= () =>
             {
                 TryJump();
-            };
-            
-            PlayerEvents.OnLose += () =>
-            {
-                Destroy(gameObject);
             };
         }
 
