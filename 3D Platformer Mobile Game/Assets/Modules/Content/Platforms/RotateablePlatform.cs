@@ -11,7 +11,8 @@ namespace Modules.Content.Platforms
         
         private void Start()
         {
-            transform.DORotate(_rotateVector, _rotationDuration, RotateMode.FastBeyond360)
+            transform
+                .DORotate(_rotateVector, _rotationDuration, RotateMode.FastBeyond360)
                 .SetEase(Ease.Linear)
                 .SetLoops(-1, LoopType.Incremental);
         }

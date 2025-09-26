@@ -8,7 +8,7 @@ namespace Modules.Core.Managers
     public class ManagerScreens : MonoBehaviour
     {
         [SerializeField] private WinScreen _winScreen;
-
+        
         private void OnEnable()
         {
             PrizeEvents.OnCollect += OpenWinScreen;
