@@ -1,4 +1,5 @@
 ﻿using System.Security.Cryptography;
+using DG.Tweening;
 using UnityEngine;
 
 namespace Modules.Content.Player
@@ -11,7 +12,7 @@ namespace Modules.Content.Player
         public PlayerControlMode mode;
 
         // References
-        [Space(20)]
+        [Space(20)] [SerializeField] private PlayerAnimationsUpdater _playerAnimationsUpdater;
         [SerializeField] private Rigidbody _rigidbody;
         [Header("First person camera")]
         [SerializeField] private Transform fpCameraTransform;
@@ -231,6 +232,8 @@ namespace Modules.Content.Player
             if (isGrounded)
             {
                 _rigidbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+                
+                _playerAnimationsUpdater.ExecuteJumpAnimation();
             }
         }
     }

@@ -1592,6 +1592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mode: 1
+  _playerAnimationsUpdater: {fileID: 5417385232813880945}
   _rigidbody: {fileID: 4273062584270228613}
   fpCameraTransform: {fileID: 0}
   cameraPole: {fileID: 1622339260746179986}
