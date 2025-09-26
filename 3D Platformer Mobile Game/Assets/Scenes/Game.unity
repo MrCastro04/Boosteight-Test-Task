@@ -3550,7 +3550,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SPAWN POINT
+  m_text: CHECK POINT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -3559,8 +3559,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4280418186
+  m_fontColor: {r: 0.5406207, g: 1, b: 0.12893075, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7988,8 +7988,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278235647
+  m_fontColor: {r: 1, g: 0.69419014, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -11258,21 +11258,25 @@ PrefabInstance:
       propertyPath: moveInputDeadZone
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 4207705236894174813, guid: e2e9673e092419d40bb36947637b38ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4915994922956739659, guid: e2e9673e092419d40bb36947637b38ff, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5279599418825360670, guid: e2e9673e092419d40bb36947637b38ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.96
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5279599418825360670, guid: e2e9673e092419d40bb36947637b38ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.45
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5279599418825360670, guid: e2e9673e092419d40bb36947637b38ff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.07
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 5279599418825360670, guid: e2e9673e092419d40bb36947637b38ff, type: 3}
       propertyPath: m_LocalRotation.w
