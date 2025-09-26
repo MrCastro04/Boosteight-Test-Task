@@ -5,7 +5,7 @@ using UnityEngine.UI;
 namespace Modules.Core.UI
 {
     [RequireComponent(typeof(Button))]
-    public class RestartLevelButton : MonoBehaviour
+    public class ExitGameButton : MonoBehaviour
     {
         [SerializeField] private ManagerScene _managerScene;
 
@@ -18,7 +18,7 @@ namespace Modules.Core.UI
 
         private void Start()
         {
-            _button.onClick.AddListener(() => _managerScene.RestartScene());
+            _button.onClick.AddListener(() => _managerScene.ExitGame());
         }
     }
 }
