@@ -762,7 +762,7 @@ Transform:
   m_GameObject: {fileID: 2441703788867816973}
   serializedVersion: 2
   m_LocalRotation: {x: 0.29036817, y: -0, z: -0, w: 0.956915}
-  m_LocalPosition: {x: 0, y: 1.99, z: 1.25}
+  m_LocalPosition: {x: 0, y: 4.4, z: 1.19}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1597,9 +1597,9 @@ MonoBehaviour:
   cameraPole: {fileID: 1622339260746179986}
   tpCameraTransform: {fileID: 4350839189288461723}
   graphics: {fileID: 4207705236894174813}
-  cameraSensitivity: 10
+  cameraSensitivity: 4.95
   moveSpeed: 8
-  moveInputDeadZone: 15
+  moveInputDeadZone: 7
   _jumpForce: 5
   PlayerAcceleration: 10
   cameraObstacleLayers:
